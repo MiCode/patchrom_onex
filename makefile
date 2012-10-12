@@ -42,9 +42,6 @@ include $(PORT_BUILD)/porting.mk
 
 # To define any local-target
 local-zip-misc:
-	@echo Update boot image
-	cp other/boot.img $(ZIP_DIR)/boot.img
-
 	@echo Update build.prop
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 
