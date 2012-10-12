@@ -11472,11 +11472,12 @@
 
     iget-object v4, v4, Landroid/net/wifi/WifiConfiguration$HotspotProfile;->SSID:Ljava/lang/String;
 
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    #as v3's SSID is not initialized after delete useless app,we delete the code
+    #invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    #move-result v3
 
-    if-nez v3, :cond_3
+    #if-nez v3, :cond_3
 
     .line 1368
     iget-object v3, p0, Landroid/net/wifi/WifiStateMachine;->mConfig:Landroid/net/wifi/WifiConfiguration;
