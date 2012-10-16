@@ -97,7 +97,7 @@ ro.build.languageremove=0
 ro.build.sense.version=4.0
 keyguard.no_require_sim=1
 # end build properties
-dalvik.vm.heapsize=128m
+dalvik.vm.heapsize=256m
 dalvik.vm.heapgrowthlimit=64m
 dalvik.vm.heapstartsize=8m
 ro.opengles.version = 131072
