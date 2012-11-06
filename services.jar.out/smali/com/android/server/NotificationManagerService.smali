@@ -1259,14 +1259,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1296
-    if-ne v1, v7, :cond_0
-
-    .line 1298
-    const/4 v3, 0x0
-
-    invoke-direct {p0, v1, p3, p1, v3}, Lcom/android/server/NotificationManagerService;->broadcastIntent(IILjava/lang/String;Landroid/app/Notification;)V
-
     goto :goto_0
 .end method
 
