@@ -741,9 +741,9 @@
     <string name="lockscreen_charged">已充电。</string>
     <string name="lockscreen_battery_short">%d%%</string>
     <string name="lockscreen_low_battery">连接您的充电器。</string>
-    <string name="lockscreen_missing_sim_message_short">没有 SIM 卡。</string>
-    <string name="lockscreen_missing_sim_message">手机中无 SIM 卡。</string>
-    <string name="lockscreen_missing_sim_instructions">请插入 SIM 卡。</string>
+    <string name="lockscreen_missing_sim_message_short">没有 SIM 卡</string>
+    <string name="lockscreen_missing_sim_message">手机中无 SIM 卡</string>
+    <string name="lockscreen_missing_sim_instructions">请插入 SIM 卡</string>
     <string name="lockscreen_missing_sim_instructions_long">SIM 卡丢失或无法读取。请插入 SIM 卡。</string>
     <string name="lockscreen_permanent_disabled_sim_instructions">"您的 SIM 卡已永久停用。
 请与您的无线服务提供商联系，以便重新获取一张 SIM 卡。"</string>
@@ -1320,8 +1320,8 @@
     <string name="lockscreen_uimsim_puk_locked_message">UIM/SIM 卡的 PUK 码已锁定。</string>
     <string name="lockscreen_uim_locked_message">UIM 卡已锁定</string>
     <string name="lockscreen_uimsim_locked_message">UIM/SIM 卡已锁定</string>
-    <string name="lockscreen_missing_uim_message_short">没有 UIM 卡。</string>
-    <string name="lockscreen_missing_uimsim_message_short">没有 UIM/SIM 卡。</string>
+    <string name="lockscreen_missing_uim_message_short">没有 UIM 卡</string>
+    <string name="lockscreen_missing_uimsim_message_short">没有 UIM/SIM 卡</string>
     <string name="lockscreen_uim_fail_message">UIM 卡无效</string>
     <string name="lockscreen_uimsim_fail_message">UIM/SIM 卡无效</string>
     <string name="style">样式</string>
