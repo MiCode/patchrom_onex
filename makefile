@@ -33,7 +33,7 @@ local-phone-apps := AppSharing BackupRestoreConfirmation \
 local-pre-zip := local-zip-misc
 local-after-zip:= local-test
 
-local-rewrite-skia-lib:= false
+out/framework2.jar : out/framework.jar
 
 # The local targets after the zip file is generated, could include 'zip2sd' to 
 # deliver the zip file to phone, or to customize other actions

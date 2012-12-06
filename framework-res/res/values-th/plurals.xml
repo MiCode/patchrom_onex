@@ -76,7 +76,7 @@
         <item quantity="one">เปิดเครือข่าย Wi-Fi ที่พร้อมใช้งาน</item>
     </plurals>
     <plurals name="matches_found">
-        <item quantity="other">%d ของ %d</item>
+        <item quantity="other">%1$d ของ %2$d</item>
         <item quantity="one">ตรงกัน 1 รายการ</item>
     </plurals>
 </resources>
