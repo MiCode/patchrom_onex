@@ -9,11 +9,11 @@ local-zip-file     := stockrom.zip
 # local-out-zip-file :=
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Camera SettingsProvider HtcMusic MediaProvider
+#local-modified-apps := Camera SettingsProvider HtcMusic MediaProvider
 
 local-modified-jars := HTCExtension
 
-local-miui-modified-apps := Phone ThemeManager Mms MiuiHome Settings Updater MiuiSystemUI MiuiGallery Music
+local-miui-modified-apps := Phone Mms MiuiHome Settings MiuiSystemUI Music
 # All apks from MIUI
 local-miui-removed-apps  := LatinIME MediaProvider SettingsProvider
 
@@ -24,7 +24,7 @@ local-phone-apps := AppSharing BackupRestoreConfirmation \
 	HtcMusicWidget HTMLViewer IMEHWRPenPower IMEXT9English KeyChain LMW MarketUpdater \
 	Nfc OneTimeInitializer PhaseBeam PluginManager SDCardWizard SharedStorageBackup \
 	TrimIt Usage WifiRouter MediaProvider CIMEXT9 HTCAlbum HtcVideoPlayer SettingsProvider \
-	HtcSoundEnhancerSetting HtcDMC DLNAMiddleLayer HtcPhotoEnhancer Tube2_Configuration
+	HtcSoundEnhancerSetting HtcDMC DLNAMiddleLayer HtcPhotoEnhancer Tube2_Configuration CIMEXT9
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
@@ -53,6 +53,10 @@ local-zip-misc:
 	cp other/bootanimation $(ZIP_DIR)/system/bin/bootanimation
 
 	@echo add system app
+	cp $(OUT_SYS_PATH)/app/ApplicationsProvider.apk $(ZIP_DIR)/system/app/
+	cp $(OUT_SYS_PATH)/app/LiveWallpapers.apk $(ZIP_DIR)/system/app/
+	cp $(OUT_SYS_PATH)/app/LiveWallpapersPicker.apk $(ZIP_DIR)/system/app/
+	cp $(OUT_SYS_PATH)/app/UserDictionaryProvider.apk $(ZIP_DIR)/system/app/
 	cp other/system_app/* $(ZIP_DIR)/system/app/
 
 	@echo add system config
