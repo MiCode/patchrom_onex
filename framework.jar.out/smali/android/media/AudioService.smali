@@ -12915,7 +12915,7 @@
     .local v1, wrappedContext:Landroid/content/Context;
     iget-object v2, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
-    invoke-virtual {v2, v1}, Lmiui/view/VolumePanel;->resetProgressBar(Landroid/content/Context;)V
+    #invoke-virtual {v2, v1}, Lmiui/view/VolumePanel;->resetProgressBar(Landroid/content/Context;)V
 
     goto :goto_0
 .end method
@@ -22448,7 +22448,7 @@
     .line 2508
     iget-object v0, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
 
-    invoke-virtual {v0, p1}, Lmiui/view/VolumePanel;->setVolumePanelOrientation(I)V
+    #invoke-virtual {v0, p1}, Lmiui/view/VolumePanel;->setVolumePanelOrientation(I)V
 
     .line 2509
     return-void
