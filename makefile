@@ -9,7 +9,7 @@ local-zip-file     := stockrom.zip
 # local-out-zip-file :=
 
 # All apps from original ZIP, but has smali files chanded
-#local-modified-apps := Camera SettingsProvider HtcMusic MediaProvider
+local-modified-apps := Camera
 
 local-modified-jars := HTCExtension
 
@@ -70,6 +70,29 @@ local-zip-misc:
 	rm -rf $(ZIP_DIR)/system/media/weather
 	rm -rf $(ZIP_DIR)/system/media/video
 	rm -f $(ZIP_DIR)/system/bin/su
+
+%.phone : out/%.jar
+	@echo push -- to --- phone
+	adb remount
+	adb push $< /system/framework
+	adb shell chmod 644 /system/framework/$*.jar
+	#adb shell stop
+	#adb shell start
+	adb reboot
+
+%.sign-plat : out/%
+	java -jar $(TOOL_DIR)/signapk.jar $(PORT_ROOT)/build/security/platform.x509.pem $(PORT_ROOT)/build/security/platform.pk8  $< $<.signed
+	@echo push -- to --- phone
+	adb remount
+	adb push $<.signed /system/app/$*
+	adb shell chmod 644 /system/app/$*
+
+%.sign-test : out/%
+	java -jar $(TOOL_DIR)/signapk.jar $(PORT_ROOT)/build/security/testkey.x509.pem $(PORT_ROOT)/build/security/testkey.pk8  $< $<.signed
+	@echo push -- to --- phone
+	adb remount
+	adb push $<.signed /system/app/$*
+	adb shell chmod 644 /system/app/$*
 
 local-test:
 #	rm -f $(local-out-zip-file)
