@@ -20,11 +20,11 @@ local-miui-removed-apps  := LatinIME MediaProvider SettingsProvider
 # All apps need to be reserved from original ZIP file
 local-phone-apps := AppSharing BackupRestoreConfirmation \
 	CertInstaller CustomizationSettingsProvider Camera DefaultContainerService DFPI DrmProvider \
-	FilePicker FaceLock FM_Radio FMRadioService GoogleTTS HTC_IME HtcBeatsNotify HtcMusic HtcMusicEnhancer \
-	HtcMusicWidget HTMLViewer IMEHWRPenPower IMEXT9English KeyChain LMW MarketUpdater \
+	FilePicker FaceLock FM_Radio FMRadioService GoogleTTS HTC_IME HtcBeatsNotify \
+	HTMLViewer IMEHWRPenPower IMEXT9English KeyChain LMW MarketUpdater \
 	Nfc OneTimeInitializer PhaseBeam PluginManager SDCardWizard SharedStorageBackup \
 	TrimIt Usage WifiRouter MediaProvider CIMEXT9 HTCAlbum HtcVideoPlayer SettingsProvider \
-	HtcSoundEnhancerSetting HtcDMC DLNAMiddleLayer HtcPhotoEnhancer Tube2_Configuration CIMEXT9
+	HtcSoundEnhancerSetting HtcDMC DLNAMiddleLayer HtcPhotoEnhancer CIMEXT9
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
