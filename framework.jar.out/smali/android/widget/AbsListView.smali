@@ -135,6 +135,12 @@
 
 .field mAnimationRunning:Z
 
+.field mBottomLineDrawable:Landroid/graphics/drawable/Drawable;
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_FIELD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+.end field
+
 .field private mCacheColorHint:I
 
 .field mCachingActive:Z
@@ -1355,6 +1361,27 @@
     return-object v0
 .end method
 
+.method private calcFirstPosition(ZI)V
+    .locals 1
+    .parameter "down"
+    .parameter "count"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    if-eqz p1, :cond_0
+
+    iget v0, p0, Landroid/widget/AbsListView;->mFirstPosition:I
+
+    add-int/2addr v0, p2
+
+    iput v0, p0, Landroid/widget/AbsListView;->mFirstPosition:I
+
+    :cond_0
+    return-void
+.end method
+
 .method private clearScrollingCache()V
     .locals 1
 
@@ -2058,6 +2085,8 @@
     iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
     iput v1, p0, Landroid/widget/AbsListView;->mDensityScale:F
+
+    invoke-static {p0}, Landroid/widget/AbsListView$Injector;->setChildSequenceStateTaggingListener(Landroid/widget/AbsListView;)V
 
     .line 879
     invoke-static {}, Lcom/htc/profileflag/ProfileConfig;->getProfileLogFps()I
@@ -4997,6 +5026,8 @@
     .end local v6           #scrollY:I
     :cond_4
     :goto_0
+    invoke-static {p0, p1}, Landroid/widget/AbsListView$Injector;->drawBorder(Landroid/widget/AbsListView;Landroid/graphics/Canvas;)V
+
     return-void
 
     .line 3962
@@ -10094,13 +10125,17 @@
 
     move-result v26
 
-    if-eqz v26, :cond_ff
+    if-eqz v26, :cond_miui_0
 
-    const/16 v26, 0x1
+    const/16 v26, 0x3
 
-    return v26
+    move-object/from16 v0, p1
 
-    :cond_ff
+    move/from16 v1, v26
+
+    invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->setAction(I)V
+
+    :cond_miui_0
     invoke-virtual/range {p0 .. p0}, Landroid/widget/AbsListView;->isEnabled()Z
 
     move-result v26
@@ -17487,46 +17522,8 @@
 
     iput-boolean v0, v1, Landroid/widget/AbsListView;->mBlockLayoutRequests:Z
 
-    .line 5237
-    if-lez v10, :cond_e
-
-    .line 5238
-    move-object/from16 v0, p0
-
-    move/from16 v1, v27
-
-    invoke-virtual {v0, v1, v10}, Landroid/widget/AbsListView;->detachViewsFromParent(II)V
-
-    .line 5239
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Landroid/widget/AbsListView;->mRecycler:Landroid/widget/AbsListView$RecycleBin;
-
-    move-object/from16 v29, v0
-
-    invoke-virtual/range {v29 .. v29}, Landroid/widget/AbsListView$RecycleBin;->removeSkippedScrap()V
-
-    .line 5244
-    :cond_e
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/AbsListView;->awakenScrollBars()Z
-
-    move-result v29
-
-    if-nez v29, :cond_f
-
-    .line 5245
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/AbsListView;->invalidate()V
-
-    .line 5248
-    :cond_f
-    move-object/from16 v0, p0
-
-    move/from16 v1, p2
-
-    invoke-virtual {v0, v1}, Landroid/widget/AbsListView;->offsetChildrenTopAndBottom(I)V
-
-    .line 5250
-    if-eqz v11, :cond_10
+    .line 5158
+    if-eqz v11, :cond_e
 
     .line 5251
     move-object/from16 v0, p0
@@ -17543,8 +17540,46 @@
 
     iput v0, v1, Landroid/widget/AbsListView;->mFirstPosition:I
 
-    .line 5254
+    .line 5162
+    :cond_e
+    if-lez v10, :cond_f
+
+    .line 5163
+    move-object/from16 v0, p0
+
+    move/from16 v1, v27
+
+    invoke-virtual {v0, v1, v10}, Landroid/widget/AbsListView;->detachViewsFromParent(II)V
+
+    .line 5164
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Landroid/widget/AbsListView;->mRecycler:Landroid/widget/AbsListView$RecycleBin;
+
+    move-object/from16 v29, v0
+
+    invoke-virtual/range {v29 .. v29}, Landroid/widget/AbsListView$RecycleBin;->removeSkippedScrap()V
+
+    .line 5169
+    :cond_f
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/AbsListView;->awakenScrollBars()Z
+
+    move-result v29
+
+    if-nez v29, :cond_10
+
+    .line 5170
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/AbsListView;->invalidate()V
+
+    .line 5173
     :cond_10
+    move-object/from16 v0, p0
+
+    move/from16 v1, p2
+
+    invoke-virtual {v0, v1}, Landroid/widget/AbsListView;->offsetChildrenTopAndBottom(I)V
+
+    .line 5175
     invoke-static/range {p2 .. p2}, Ljava/lang/Math;->abs(I)I
 
     move-result v3

@@ -184,6 +184,18 @@
 
     iput-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mCheckBox:Landroid/widget/CheckBox;
 
+    iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mCheckBox:Landroid/widget/CheckBox;
+
+    invoke-static {p0, v1}, Lcom/android/internal/view/menu/ListMenuItemView$Injector;->insertCheckBox(Lcom/android/internal/view/menu/ListMenuItemView;Landroid/widget/CheckBox;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_miui_0
+
+    return-void
+
+    :cond_miui_0
+
     .line 279
     iget-boolean v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->isHtcStyle:Z
 
@@ -327,6 +339,17 @@
     iput-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mRadioButton:Landroid/widget/RadioButton;
 
     .line 269
+    iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mRadioButton:Landroid/widget/RadioButton;
+
+    invoke-static {p0, v1}, Lcom/android/internal/view/menu/ListMenuItemView$Injector;->insertRadioButton(Lcom/android/internal/view/menu/ListMenuItemView;Landroid/widget/RadioButton;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_miui_0
+
+    return-void
+
+    :cond_miui_0
     iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mRadioButton:Landroid/widget/RadioButton;
 
     invoke-virtual {p0, v1}, Lcom/android/internal/view/menu/ListMenuItemView;->addView(Landroid/view/View;)V
@@ -685,6 +708,16 @@
     invoke-virtual {v0, v5}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     .line 163
+    iget-object v5, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mTitleView:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mItemData:Lcom/android/internal/view/menu/MenuItemImpl;
+
+    invoke-virtual {v1}, Lcom/android/internal/view/menu/MenuItemImpl;->isChecked()Z
+
+    move-result v1
+
+    invoke-static {v5, v1}, Lcom/android/internal/view/menu/ListMenuItemView$Injector;->checkTextColor(Landroid/widget/TextView;Z)V
+
     if-eqz p1, :cond_7
 
     move v1, v3
@@ -846,6 +879,10 @@
     invoke-virtual {v0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
     .line 204
+    iget-object v1, p0, Lcom/android/internal/view/menu/ListMenuItemView;->mTitleView:Landroid/widget/TextView;
+
+    invoke-static {v1, p1}, Lcom/android/internal/view/menu/ListMenuItemView$Injector;->checkTextColor(Landroid/widget/TextView;Z)V
+
     return-void
 
     .line 197

@@ -808,10 +808,14 @@
 
     move-result v21
 
-    if-eqz v21, :goto_1
+    if-eqz v21, :cond_miui_0
 
     const/16 v21, -0x1
 
+    return v21
+    ########### method end
+
+    :cond_miui_0
     goto/16 :goto_0
 
     .line 273
