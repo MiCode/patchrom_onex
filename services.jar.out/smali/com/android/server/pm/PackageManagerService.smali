@@ -5093,6 +5093,49 @@
     return-void
 .end method
 
+.method private appendExtendedFlags(Landroid/content/pm/PackageParser$Package;Lcom/android/server/pm/PackageSetting;)V
+    .locals 4
+    .parameter "pkg"
+    .parameter "pkgSetting"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    .line 4426
+    iget-object v0, p1, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    iget v2, p2, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
+
+    const/high16 v3, -0x8000
+
+    and-int/2addr v2, v3
+
+    or-int/2addr v1, v2
+
+    iput v1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    .line 4427
+    iget-object v0, p1, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    iget v2, p2, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
+
+    const/high16 v3, 0x4000
+
+    and-int/2addr v2, v3
+
+    or-int/2addr v1, v2
+
+    iput v1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    .line 4428
+    return-void
+.end method
+
 .method static appendInts([I[I)[I
     .locals 3
     .parameter "cur"
@@ -19979,41 +20022,14 @@
     .end local v28           #i:I
     .end local v52           #renamed:Ljava/lang/String;
     :cond_19
-    move-object/from16 v0, p1
 
-    iget-object v3, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    move-object/from16 v0, p0
 
-    iget v4, v3, Landroid/content/pm/ApplicationInfo;->flags:I
+    move-object/from16 v1, p1
 
-    move-object/from16 v0, v47
+    move-object/from16 v2, v47
 
-    iget v10, v0, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
-
-    const/high16 v11, -0x8000
-
-    and-int/2addr v10, v11
-
-    or-int/2addr v4, v10
-
-    iput v4, v3, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    move-object/from16 v0, p1
-
-    iget-object v3, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget v4, v3, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    move-object/from16 v0, v47
-
-    iget v10, v0, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
-
-    const/high16 v11, 0x4000
-
-    and-int/2addr v10, v11
-
-    or-int/2addr v4, v10
-
-    iput v4, v3, Landroid/content/pm/ApplicationInfo;->flags:I
+    invoke-direct {v0, v1, v2}, Lcom/android/server/pm/PackageManagerService;->appendExtendedFlags(Landroid/content/pm/PackageParser$Package;Lcom/android/server/pm/PackageSetting;)V
 
     move-object/from16 v0, p0
 

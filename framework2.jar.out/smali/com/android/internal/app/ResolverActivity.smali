@@ -769,12 +769,6 @@
 
     if-eqz v1, :miui_cond_3
 
-    invoke-static {p0}, Lmiui/util/UiUtils;->isV5Ui(Landroid/content/Context;)Z
-
-    move-result v1
-
-    if-nez v1, :miui_cond_3
-
     .line 204
     const v1, 0x102026d
 

@@ -17523,25 +17523,11 @@
     iput-boolean v0, v1, Landroid/widget/AbsListView;->mBlockLayoutRequests:Z
 
     .line 5158
-    if-eqz v11, :cond_e
-
-    .line 5251
     move-object/from16 v0, p0
 
-    iget v0, v0, Landroid/widget/AbsListView;->mFirstPosition:I
+    invoke-direct {v0, v11, v10}, Landroid/widget/AbsListView;->calcFirstPosition(ZI)V
 
-    move/from16 v29, v0
-
-    add-int v29, v29, v10
-
-    move/from16 v0, v29
-
-    move-object/from16 v1, p0
-
-    iput v0, v1, Landroid/widget/AbsListView;->mFirstPosition:I
-
-    .line 5162
-    :cond_e
+    .line 5160
     if-lez v10, :cond_f
 
     .line 5163
