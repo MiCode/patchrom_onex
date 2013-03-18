@@ -148,7 +148,7 @@
 
     .prologue
     .line 782
-    const v3, 0x4110023
+    const v3, 0x1020014
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -158,7 +158,7 @@
 
     .line 783
     .local v1, text:Landroid/widget/TextView;
-    const v3, 0x4110024
+    const v3, 0x1020015
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -168,7 +168,7 @@
 
     .line 784
     .local v2, text2:Landroid/widget/TextView;
-    const v3, 0x4110022
+    const v3, 0x1020006
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1223,7 +1223,7 @@
     .line 754
     iget-object v5, p0, Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    const v6, 0x4030016
+    const v6, 0x1090093
 
     invoke-virtual {v5, v6, p3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1234,7 +1234,7 @@
     invoke-virtual {v3, v4}, Landroid/view/View;->setMinimumHeight(I)V
 
     .line 764
-    const v5, 0x4110022
+    const v5, 0x1020006
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
