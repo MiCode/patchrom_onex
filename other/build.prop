@@ -279,3 +279,6 @@ tf.enable=y
 ro.hwui.texture_cache_size=48
 
 persist.usb.android_config = 1
+
+ro.miui.ui.version.code=3
+ro.miui.ui.version.name=V5
