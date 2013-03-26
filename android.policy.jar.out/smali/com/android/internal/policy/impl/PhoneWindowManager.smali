@@ -250,6 +250,12 @@
 
 
 # instance fields
+.field mAboveStatusBarFullScreenWindow:Landroid/view/WindowManagerPolicy$WindowState;
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_FIELD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+.end field
+
 .field final HTC_DOCKSCREEN_HOME_INTENT:Ljava/lang/String;
 
 .field final KEY_DESK_DOCK_HOME_CAPTURE:Ljava/lang/String;
@@ -5172,6 +5178,7 @@
 
     .line 4023
     :cond_1
+    invoke-static {p0, p1, p2}, Lcom/android/internal/policy/impl/PhoneWindowManager$Injector;->setAboveStatusBarFullScreenWindow(Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;)V
     return-void
 
     .line 4004
@@ -5206,7 +5213,8 @@
     .line 3972
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mAllowLockscreenWhenOn:Z
 
-    .line 3977
+    invoke-static {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$Injector;->clearAboveStatusBarFullScreenWindow(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
+
     return-void
 .end method
 
