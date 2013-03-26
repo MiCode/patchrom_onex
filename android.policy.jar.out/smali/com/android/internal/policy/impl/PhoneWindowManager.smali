@@ -8171,7 +8171,7 @@
     :goto_0
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBar:Landroid/view/WindowManagerPolicy$WindowState;
 
-    if-eqz v7, :cond_0
+    if-eqz v7, :cond_miui_1
 
     .line 4037
     iget-boolean v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mForceStatusBar:Z
@@ -8191,7 +8191,13 @@
 
     .line 4079
     :cond_0
+    invoke-virtual {p0, v5}, Lcom/android/internal/policy/impl/PhoneWindowManager;->notifyStatusBarShowingOrHiding(Z)V
+
+    :cond_miui_2
     :goto_1
+    invoke-static {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$Injector;->checkStatusBarVisibility(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
+
+    :cond_miui_1
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mTopIsFullscreen:Z
 
     .line 4084
@@ -8326,7 +8332,7 @@
     :cond_7
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mTopFullscreenOpaqueWindowState:Landroid/view/WindowManagerPolicy$WindowState;
 
-    if-eqz v7, :cond_0
+    if-eqz v7, :cond_miui_2
 
     .line 4047
     iget v7, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
@@ -8355,7 +8361,7 @@
 
     move-result v7
 
-    if-eqz v7, :cond_0
+    if-eqz v7, :cond_miui_2
 
     .line 4056
     or-int/lit8 v0, v0, 0x1
@@ -8368,6 +8374,8 @@
     invoke-direct {v8, p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$9;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     invoke-virtual {v7, v8}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    invoke-virtual {p0, v6}, Lcom/android/internal/policy/impl/PhoneWindowManager;->notifyStatusBarShowingOrHiding(Z)V
 
     goto/16 :goto_1
 
@@ -8385,9 +8393,12 @@
 
     move-result v7
 
-    if-eqz v7, :cond_0
+    if-eqz v7, :cond_miui_0
 
     or-int/lit8 v0, v0, 0x1
+
+    :cond_miui_0
+    invoke-virtual {p0, v5}, Lcom/android/internal/policy/impl/PhoneWindowManager;->notifyStatusBarShowingOrHiding(Z)V
 
     goto/16 :goto_1
 
@@ -15813,6 +15824,56 @@
     goto :goto_0
 .end method
 
+.method notifyStatusBarShowingOrHiding(Z)V
+    .locals 5
+    .parameter "showing"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    :try_start_0
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->getStatusBarService()Lcom/android/internal/statusbar/IStatusBarService;
+
+    move-result-object v1
+
+    .local v1, statusbar:Lcom/android/internal/statusbar/IStatusBarService;
+    if-eqz p1, :cond_0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBarDisableToken:Landroid/os/IBinder;
+
+    const-string v4, "system"
+
+    invoke-interface {v1, v2, v3, v4}, Lcom/android/internal/statusbar/IStatusBarService;->disable(ILandroid/os/IBinder;Ljava/lang/String;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .end local v1           #statusbar:Lcom/android/internal/statusbar/IStatusBarService;
+    :goto_1
+    return-void
+
+    .restart local v1       #statusbar:Lcom/android/internal/statusbar/IStatusBarService;
+    :cond_0
+    const/high16 v2, 0x400
+
+    goto :goto_0
+
+    .end local v1           #statusbar:Lcom/android/internal/statusbar/IStatusBarService;
+    :catch_0
+    move-exception v0
+
+    .local v0, e:Landroid/os/RemoteException;
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mStatusBarService:Lcom/android/internal/statusbar/IStatusBarService;
+
+    goto :goto_1
+.end method
+
+
 .method intitPenVars()V
     .locals 3
 
@@ -22869,6 +22930,10 @@
     move-result-object v2
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {p1, v0}, Lcom/android/internal/policy/impl/PhoneWindowManager$Injector;->getMiuiViewLayer(II)I
+
+    move-result v0
 
     goto :goto_0
 
