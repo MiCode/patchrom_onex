@@ -8384,6 +8384,8 @@
     .end local v0           #N:I
     :cond_6
     :goto_7
+    invoke-static {p0}, Lcom/android/server/wm/WindowManagerService$Injector;->hideFloatingWindow(Lcom/android/server/wm/WindowManagerService;)V
+
     invoke-static {v11, v12}, Landroid/os/Trace;->traceEnd(J)V
 
     goto/16 :goto_0
@@ -35717,6 +35719,8 @@
     move-object/from16 v1, v29
 
     invoke-direct {v0, v1}, Lcom/android/server/wm/WindowManagerService;->updatePenWorkingModeLocked(Lcom/android/server/wm/WindowState;)V
+
+    invoke-static/range {v27 .. v27}, Lcom/android/server/wm/WindowManagerService$Injector;->updateFloatingWindow(Lcom/android/server/wm/WindowState;)V
 
     .line 3576
     monitor-exit v30
