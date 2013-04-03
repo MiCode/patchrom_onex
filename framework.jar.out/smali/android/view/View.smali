@@ -2024,7 +2024,7 @@
     iput v0, p0, Landroid/view/View;->mTouchSlop:I
 
     .line 3254
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setOverScrollMode(I)V
 
@@ -3483,7 +3483,7 @@
 
     move-object/from16 v0, p0
 
-    move/from16 v1, v41
+    move/from16 v1, v17
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOverScrollMode(I)V
 
@@ -32494,16 +32494,47 @@
 .end method
 
 .method public setOverScrollMode(I)V
-    .locals 1
+    .locals 3
     .parameter "overScrollMode"
 
     .prologue
-    .line 16354
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_0
+
     const/4 v0, 0x2
 
-    iput v0, p0, Landroid/view/View;->mOverScrollMode:I
+    if-eq p1, v0, :cond_0
 
-    .line 16355
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Invalid overscroll mode "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    iput p1, p0, Landroid/view/View;->mOverScrollMode:I
+
     return-void
 .end method
 
