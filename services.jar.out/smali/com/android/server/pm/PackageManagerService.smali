@@ -45066,7 +45066,7 @@
     .line 9490
     :cond_0
 
-    invoke-static/range {p0 .. p3}, Lcom/android/server/pm/PackageManagerService$Injector;->setAccessControl(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;II)Z
+    invoke-static/range {p0 .. p3}, Lcom/android/server/pm/PackageManagerService$Injector;->setMiuiExtendFlags(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;II)Z
 
     move-result v0
 
