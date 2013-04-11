@@ -1986,4 +1986,4 @@ system/xbin/insecure 0 2000 6755
 system/xbin/klog.sh 0 2000 755
 system/xbin/lastkmsg.sh 0 2000 755
 system/xbin/rlog.sh 0 2000 755
-system/xbin/shelld 0 2000 0755
+system/xbin/shelld 0 1000 6750
