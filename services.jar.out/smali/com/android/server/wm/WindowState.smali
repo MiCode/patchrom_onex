@@ -117,6 +117,8 @@
 
 .field mInputChannel:Landroid/view/InputChannel;
 
+.field mInputChannelSaved:Landroid/view/InputChannel;
+
 .field final mInputWindowHandle:Lcom/android/server/input/InputWindowHandle;
 
 .field mInvGlobalScale:F
