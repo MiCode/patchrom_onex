@@ -139,14 +139,14 @@
     .line 163
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Lcom/android/internal/telephony/WapPushOverSms;->dispatchWapPdu([BLjava/lang/String;)I
+    invoke-virtual {p0, p1, v0}, Lcom/android/internal/telephony/WapPushOverSms;->dispatchWapPdu_htc([BLjava/lang/String;)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public dispatchWapPdu([BLjava/lang/String;)I
+.method public dispatchWapPdu_htc([BLjava/lang/String;)I
     .locals 26
     .parameter "pdu"
     .parameter "Oriaddr"
@@ -449,6 +449,7 @@
 
     .line 252
     .local v14, intentData:[B
+    :cond_miui_0
     :goto_1
     const-string v21, "application/vnd.wap.mms-message"
 
@@ -812,10 +813,6 @@
 
     const/16 v21, -0x1
 
-    return v21
-    ########### method end
-
-    :cond_miui_0
     goto/16 :goto_0
 
     .line 273
