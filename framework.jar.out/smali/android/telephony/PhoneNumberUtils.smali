@@ -8212,7 +8212,7 @@
 
     .line 1661
     .local v0, c:C
-    invoke-static {v4, v0}, Landroid/telephony/PhoneNumberUtils$Injector;->appendNonSeparator(Ljava/lang/StringBuilder;C)V
+    invoke-static {v4, v0, v2}, Landroid/telephony/PhoneNumberUtils$Injector;->appendNonSeparator(Ljava/lang/StringBuilder;CI)V
 
     const/16 v5, 0xa
 
