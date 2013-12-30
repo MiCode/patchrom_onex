@@ -56,13 +56,5 @@ then
 fi
 
 if [ $2 = "$BUILD_OUT/android.policy" ];then
-    appendSmaliPart "android.policy.jar.out"
-    curdir=`pwd`
-    cd overlay/android.policy.jar.out
-    for file in `find . -name *.smali`
-    do
-        dstfile="$curdir/out/android.policy/$file"
-        cat $file >> $dstfile
-    done
-    cd -
+    appendSmaliPart "android.policy"
 fi
