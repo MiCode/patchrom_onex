@@ -3926,7 +3926,6 @@
     .end annotation
 
     .prologue
-    .line 3184
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->mSpnOverride:Lcom/android/internal/telephony/gsm/SpnOverride;
 
     if-eqz v0, :cond_0
@@ -3939,18 +3938,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 3185
-    iget-object v0, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->mSpnOverride:Lcom/android/internal/telephony/gsm/SpnOverride;
-
-    invoke-virtual {v0, p1}, Lcom/android/internal/telephony/gsm/SpnOverride;->getSpn(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/internal/telephony/gsm/SIMRecords;->spn:Ljava/lang/String;
-
     invoke-static {p0}, Lcom/android/internal/telephony/gsm/SIMRecords$Injector;->updateSpnDisplayCondition(Lcom/android/internal/telephony/gsm/SIMRecords;)V
 
-    .line 3187
     :cond_0
     return-void
 .end method
